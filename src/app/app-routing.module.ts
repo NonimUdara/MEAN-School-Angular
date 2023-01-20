@@ -20,6 +20,7 @@ import { MathslistComponent } from './components/mathslist/mathslist.component';
 import { ChatBoxComponent } from './components/chat-box/chat-box.component';
 import { AddbioComponent } from './components/addbio/addbio.component';
 import { BiolistComponent } from './components/biolist/biolist.component';
+import { MathscrudComponent } from './components/mathscrud/mathscrud.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -41,7 +42,8 @@ const routes: Routes = [
   {path: 'mathslist', component: MathslistComponent},
   {path: 'chatbox', component: ChatBoxComponent},
   {path: 'addbio', component: AddbioComponent},
-  {path: 'biolist', component: BiolistComponent}
+  {path: 'biolist', component: BiolistComponent},
+  {path: 'mathscrud', component: MathscrudComponent}
 ];
 
 @NgModule({

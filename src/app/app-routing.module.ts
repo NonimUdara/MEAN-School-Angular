@@ -18,6 +18,7 @@ import { TeacherprofileComponent } from './components/teacherprofile/teacherprof
 import { AddmathsComponent } from './components/addmaths/addmaths.component';
 import { MathslistComponent } from './components/mathslist/mathslist.component';
 import { ChatBoxComponent } from './components/chat-box/chat-box.component';
+import { AddbioComponent } from './components/addbio/addbio.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -37,7 +38,8 @@ const routes: Routes = [
   {path: 'teacherprofile', component: TeacherprofileComponent },
   {path: 'addmaths', component: AddmathsComponent},
   {path: 'mathslist', component: MathslistComponent},
-  {path: 'chatbox', component: ChatBoxComponent}
+  {path: 'chatbox', component: ChatBoxComponent},
+  {path: 'addbio', component: AddbioComponent}
 ];
 
 @NgModule({

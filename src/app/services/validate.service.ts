@@ -23,13 +23,13 @@ export class ValidateService {
     }
   }
 
-  // validateMeeting(meeting: {  name: any; date: any; title: any; duration: any; link: any;}){
-  //   if( meeting.name == undefined || meeting.date == undefined || meeting.title == undefined || meeting.duration == undefined || meeting.link == undefined){
-  //     return false;
-  //   } else {
-  //     return true;
-  //   }
-  // }
+  validateMeeting(meeting: {  name: any; date: any; title: any; duration: any; link: any; id: any; passcode: any}){
+    if( meeting.name == undefined || meeting.date == undefined || meeting.title == undefined || meeting.duration == undefined || meeting.link == undefined || meeting.id == undefined || meeting.passcode == undefined){
+      return false;
+    } else {
+      return true;
+    }
+  }
 
 
   validateEmail(email: any){

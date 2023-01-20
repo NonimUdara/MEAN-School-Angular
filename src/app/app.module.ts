@@ -31,6 +31,7 @@ import { TeacherprofileComponent } from './components/teacherprofile/teacherprof
 import { AddmathsComponent } from './components/addmaths/addmaths.component';
 import { MathslistComponent } from './components/mathslist/mathslist.component';
 import { ChatBoxComponent } from './components/chat-box/chat-box.component';
+import { AddbioComponent } from './components/addbio/addbio.component';
 
 const appRoutes : Routes = [
   // {path:'', component: HomeComponent},
@@ -62,7 +63,8 @@ const appRoutes : Routes = [
     TeacherprofileComponent,
     AddmathsComponent,
     MathslistComponent,
-    ChatBoxComponent
+    ChatBoxComponent,
+    AddbioComponent
   ],
   imports: [
     BrowserModule,

@@ -37,9 +37,7 @@ export class ChatBoxComponent implements OnInit {
         element.style.margin = '15px';
         document.getElementById('message-list')?.appendChild(element);
       }
-      console.log("DATA : ", data);
     });
-    console.log("DATA : ");
   }
 
   sendMsg(){

@@ -15,16 +15,16 @@ export class MathscrudService {
 
   constructor(private httpClient:HttpClient) { }
 
-  AddMaths(data:Meeting):Observable<any>{
+  add(data:Meeting):Observable<any>{
     let API_URL = `${this.REST_API}/addmaths`;
     return this.httpClient.post(API_URL,data).pipe(catchError(this.handleError))
   }
 
-  getMaths(){
+  get(){
     return this.httpClient.get(`${this.REST_API}`);
   }
 
-  getMath(id:any) :Observable<any>{
+  getOne(id:any) :Observable<any>{
     let API_URL = `${this.REST_API}/readmaths/${id}`;
     return this.httpClient.get(API_URL,{headers:this.httpHeaders}).pipe(map((res:any)=>{
       return res || {}
@@ -34,14 +34,14 @@ export class MathscrudService {
   }
 
   updateMath(id:any , data:any):Observable<any>{
-    let API_URL = `${this.REST_API}/updatemaths/${id}`;
+    let API_URL = `${this.REST_API}/update/${id}`;
     return this.httpClient.put(API_URL, data, {headers:this.httpHeaders}).pipe(
       catchError(this.handleError)
     )
   }
 
   deleteMath(id:any):Observable<any>{
-    let API_URL = `${this.REST_API}/deletemaths/${id}`;
+    let API_URL = `${this.REST_API}/delete/${id}`;
     return this.httpClient.delete(API_URL, { headers: this.httpHeaders}).pipe(
       catchError(this.handleError)
     )

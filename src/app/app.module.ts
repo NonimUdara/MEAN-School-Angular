@@ -32,6 +32,7 @@ import { AddmathsComponent } from './components/addmaths/addmaths.component';
 import { MathslistComponent } from './components/mathslist/mathslist.component';
 import { ChatBoxComponent } from './components/chat-box/chat-box.component';
 import { AddbioComponent } from './components/addbio/addbio.component';
+import { BiolistComponent } from './components/biolist/biolist.component';
 
 const appRoutes : Routes = [
   // {path:'', component: HomeComponent},
@@ -64,7 +65,8 @@ const appRoutes : Routes = [
     AddmathsComponent,
     MathslistComponent,
     ChatBoxComponent,
-    AddbioComponent
+    AddbioComponent,
+    BiolistComponent
   ],
   imports: [
     BrowserModule,

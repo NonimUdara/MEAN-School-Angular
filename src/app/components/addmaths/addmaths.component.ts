@@ -31,7 +31,7 @@ export class AddmathsComponent implements OnInit {
 
      ngOnInit() { }
      onSubmit(): any {
-       this.crudApi.AddMaths(this.mathForm.value).subscribe((res:any)=>{
+       this.crudApi.add(this.mathForm.value).subscribe((res:any)=>{
          console.log('Data Added SuccesFully');
          this.flashMessage.show('You are now registered and can now login', {cssClass: 'alert-success', timeout: 3000});
          this.ngZone.run(() => this.router.navigateByUrl('/teacherdashboard'))

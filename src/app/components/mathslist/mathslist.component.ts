@@ -7,6 +7,7 @@ import { MathscrudService } from '../../services/mathscrud.service';
   styleUrls: ['./mathslist.component.css']
 })
 export class MathslistComponent implements OnInit {
+  
   Meeting:any =[];
   constructor(private crudApi:MathscrudService) {}
 

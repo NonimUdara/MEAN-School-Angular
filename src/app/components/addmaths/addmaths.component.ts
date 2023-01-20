@@ -1,8 +1,9 @@
-import { Component, NgZone, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
-import { MathscrudService } from './../../services/mathscrud.service';
+import { Component, OnInit } from '@angular/core';
+import { ValidateService } from '../../services/validate.service';
+import { MathscrudService } from '../../services/mathscrud.service';
 import { FlashMessagesService } from 'flash-messages-angular';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-addmaths',
@@ -11,32 +12,53 @@ import { FlashMessagesService } from 'flash-messages-angular';
 })
 export class AddmathsComponent implements OnInit {
 
-  mathForm: FormGroup;
+  name: String | undefined;
+  date: String | undefined;
+  title: String | undefined;
+  duration: String | undefined;
+  link: String | undefined;
+  id: String | undefined;
+  passcode: String | undefined;
 
-  constructor(private formBuilder:FormBuilder,
-    private router:Router,
-    private ngZone:NgZone,
+  constructor(
+    
+    private validateService: ValidateService, 
     private flashMessage:FlashMessagesService,
-    private crudApi: MathscrudService) {
-      this.mathForm = this.formBuilder.group({
-        name:[''],
-        date:[''],
-        title:[''],
-        duration:[''],
-        link:[''],
-        id:[''],
-        passcode:['']
-      })
-     }
+    private authService:MathscrudService,
+    private router:Router
+    
+    ) { }
 
-     ngOnInit() { }
-     onSubmit(): any {
-       this.crudApi.add(this.mathForm.value).subscribe((res:any)=>{
-         console.log('Data Added SuccesFully');
-         this.flashMessage.show('You are now registered and can now login', {cssClass: 'alert-success', timeout: 3000});
-         this.ngZone.run(() => this.router.navigateByUrl('/teacherdashboard'))
-         }, (err) => {
-           console.log(err);
-         });
+     ngOnInit(): void {
+    
+     }
+   
+     onRegisterSubmit() {
+       const meeting = {
+         name: this.name,
+         date: this.date,
+         title: this.title,
+         duration: this.duration,
+         link: this.link,
+         id: this.id,
+         passcode: this.passcode
+       }
+   
+       // Required Fields
+       if (!this.validateService.validateMeeting(meeting)) {
+         this.flashMessage.show('Please fill in all fields', {cssClass: 'alert-danger', timeout: 3000});
+         return;
+       }
+   
+       // Register user
+       this.authService.add(meeting).subscribe(data => {
+         if(data) {
+           this.flashMessage.show('You are now registered and can now login', {cssClass: 'alert-success', timeout: 3000});
+           this.router.navigate(['teacherdashboard']);
+         } else {
+           this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
+           this.router.navigate(['addbio']);
+         }
+       });
        }
   }

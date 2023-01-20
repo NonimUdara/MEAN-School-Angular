@@ -1,40 +1,55 @@
-<div class="row justify-content-center mt-5">
-    <div class="col-md-6">
-        <form [formGroup]="mathForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" formControlName="name" required>
+<h2 class="h2" style="text-align: center; margin-bottom: 50px;">Add Biological Science Meeting</h2>
+<div class="card" style="margin-bottom: 70px; padding: 10px;">
+    <form (submit) = "onRegisterSubmit()">
+        <div class="form-group">
+            <label class="control-label col-sm-2">Name</label>
+            <div class="col-sm-10">
+                <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Enter Your Name">
             </div>
-            <div class="form-group">
-                <label for="name">Date</label>
-                <input type="date" class="form-control" formControlName="date" required>
-            </div>
-            <div class="form-group">
-                <label for="name">Title</label>
-                <input type="text" class="form-control" formControlName="title" required>
-            </div>
-            <div class="form-group">
-                <label for="name">Duration</label>
-                <input type="text" class="form-control" formControlName="duration" required>
-            </div>
-            <div class="form-group">
-                <label for="name">Link</label>
-                <input type="text" class="form-control" formControlName="link" required>
-            </div>
-            <div class="form-group">
-                <label for="name">Meeting ID</label>
-                <input type="text" class="form-control" formControlName="id" required>
-            </div>
-            <div class="form-group">
-                <label for="name">Passcode</label>
-                <input type="text" class="form-control" formControlName="passcode" required>
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit">Add meeting</button>
-            </div>
-        </form>
-        <div style="margin-top: 10px; margin-bottom: 10px;">
-            <a class="btn btn-info" href="teacherdashboard" role="button">Go Back <<</a>
         </div>
-    </div>
-    </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4">Date of Meeting</label>
+            <div class="col-sm-10">
+                <input type="date" [(ngModel)]="date" name="date" class="form-control"placeholder="Enter Date of Meeting">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Title Of the Lesson</label>
+            <div class="col-sm-10">
+                <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Enter Lesson Going to Teach">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Duration</label>
+            <div class="col-sm-10">
+                <input type="text" [(ngModel)]="duration" name="duration" class="form-control" placeholder="Enter Duration of Your Meeting">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Link</label>
+            <div class="col-sm-10">
+                <input type="text" [(ngModel)]="link" name="link" class="form-control" placeholder="Enter Link of your Zoom Meeting">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">ID</label>
+            <div class="col-sm-10">
+                <input type="text" [(ngModel)]="id" name="id" class="form-control" placeholder="Enter your Meeting ID">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Passcode</label>
+            <div class="col-sm-10">
+                <input type="password" [(ngModel)]="passcode" name="passcode" class="form-control" placeholder="Enter your Meeting Passcode">
+            </div>
+        </div>
+        <div class="">
+            <div class="col-12" style="text-align: center;">
+                <button type="submit" class="btn btn-primary btn-lg w-50" style="margin-bottom: 20px;">Add Meeting</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div style="margin-top: -50px; margin-bottom: 10px;">
+    <a class="btn btn-info" href="teacherdashboard" role="button">Go Back <<</a>
+</div>

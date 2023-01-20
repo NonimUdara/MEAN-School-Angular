@@ -1,0 +1,98 @@
+<div class="card text-center" style="margin-bottom: 50px;">
+    <div class="card-header">
+        Welcome Student
+    </div>
+    <div class="card-body" *ngIf="student">
+        <h5 class="card-title">Hello {{student.name}}</h5>
+        <p class="card-text">We are introducing below featers for you enjoy!</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="">
+                <div class="card-body">
+                    <p class="card-text">Your Profile From Here</p>
+                    <a href="profile" class="btn btn-primary">Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="">
+                <div class="card-body">
+                    <p class="card-text">Learning Resources From Here.</p>
+                    <a href="" class="btn btn-primary">Resources</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+    </div>
+    <div class="card-body">
+        <h5 class="">Meeting Details From Here!</h5>
+    </div>
+    <div class="row">
+        <div class="col-2.4">
+            <div class="">
+                <div class="card-body">
+                    <p class="card-text">Related to Physycal Science Stream.</p>
+                    <a href="#" class="btn btn-danger w-50">Maths</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-2.4">
+            <div class="">
+                <div class="card-body">
+                    <p class="card-text">Related to Biologycal Science Stream.</p>
+                    <a href="#" class="btn btn-success w-50">Biology</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-2.4">
+            <div class="">
+                <div class="card-body">
+                    <p class="card-text">Related to Arts Stream.</p>
+                    <a href="#" class="btn btn-info w-50">Arts</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-2.4">
+            <div class="">
+                <div class="card-body">
+                    <p class="card-text">Related to Commerce Stream.</p>
+                    <a href="#" class="btn btn-warning w-50">Commerce</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-2.4">
+            <div class="">
+                <div class="card-body">
+                    <p class="card-text">Related to Technology Stream.</p>
+                    <a href="#" class="btn btn-dark w-50">Technology</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card"></div>
+    <div class="row">       
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="">
+                <div class="card-body">
+                    <a href="" class="btn btn-danger" (click)="onLogoutClick()">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="">
+                <div class="card-body">
+                    <a href="chatbox" class="btn btn-primary">Chat Admin</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="">
+                <div class="card-body">
+                    <a href="" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

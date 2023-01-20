@@ -1,0 +1,40 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <form [formGroup]="mathForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" formControlName="name" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Date</label>
+                <input type="date" class="form-control" formControlName="date" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Title</label>
+                <input type="text" class="form-control" formControlName="title" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Duration</label>
+                <input type="text" class="form-control" formControlName="duration" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Link</label>
+                <input type="text" class="form-control" formControlName="link" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Meeting ID</label>
+                <input type="text" class="form-control" formControlName="id" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Passcode</label>
+                <input type="text" class="form-control" formControlName="passcode" required>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">Add meeting</button>
+            </div>
+        </form>
+        <div style="margin-top: 10px; margin-bottom: 10px;">
+            <a class="btn btn-info" href="teacherdashboard" role="button">Go Back <<</a>
+        </div>
+    </div>
+    </div>

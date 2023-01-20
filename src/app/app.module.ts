@@ -1,0 +1,81 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/studentlogin/studentlogin.component';
+import { RegisterComponent } from './components/studentregister/studentregister.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { HomeComponent } from './components/home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlashMessagesModule } from 'flash-messages-angular';
+
+import { ValidateService } from './services/validate.service';
+import { AuthService } from './services/Student-crudauth.service';
+import { StudentslistComponent } from './components/studentslist/studentslist.component';
+import { StudentupdateComponent } from './components/studentupdate/studentupdate.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
+import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
+import { TeacherloginComponent } from './components/teacherlogin/teacherlogin.component';
+import { TeacherregisterComponent } from './components/teacherregister/teacherregister.component';
+import { StudentdashboardComponent } from './components/studentdashboard/studentdashboard.component';
+import { TeacherdashboardComponent } from './components/teacherdashboard/teacherdashboard.component';
+import { TeacherslistComponent } from './components/teacherslist/teacherslist.component';
+import { TeacherupdateComponent } from './components/teacherupdate/teacherupdate.component';
+import { TeacherprofileComponent } from './components/teacherprofile/teacherprofile.component';
+import { AddmathsComponent } from './components/addmaths/addmaths.component';
+import { MathslistComponent } from './components/mathslist/mathslist.component';
+import { ChatBoxComponent } from './components/chat-box/chat-box.component';
+
+const appRoutes : Routes = [
+  // {path:'', component: HomeComponent},
+  // {path:'register', component: RegisterComponent},
+  // {path:'login', component: LoginComponent},
+  // {path:'dashboard', component: DashboardComponent},
+  // {path:'profile', component: ProfileComponent},  
+]
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent,
+    HomeComponent,
+    StudentslistComponent,
+    StudentupdateComponent,
+    FooterComponent,
+    AdminloginComponent,
+    AdmindashboardComponent,
+    TeacherloginComponent,
+    TeacherregisterComponent,
+    StudentdashboardComponent,
+    TeacherdashboardComponent,
+    TeacherslistComponent,
+    TeacherupdateComponent,
+    TeacherprofileComponent,
+    AddmathsComponent,
+    MathslistComponent,
+    ChatBoxComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
+    FlashMessagesModule.forRoot(),
+    FlashMessagesModule,
+    FontAwesomeModule
+  ],
+  providers: [ValidateService, AuthService, HttpClient, HttpClientModule],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

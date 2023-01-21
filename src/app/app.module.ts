@@ -50,6 +50,7 @@ import { TechlistComponent } from './components/techlist/techlist.component';
 import { TechcrudComponent } from './components/techcrud/techcrud.component';
 import { TechupdateComponent } from './components/techupdate/techupdate.component';
 import { AddresourceComponent } from './components/addresource/addresource.component';
+import { ResourceslistComponent } from './components/resourceslist/resourceslist.component';
 
 const appRoutes : Routes = [
   // {path:'', component: HomeComponent},
@@ -100,7 +101,8 @@ const appRoutes : Routes = [
     TechlistComponent,
     TechcrudComponent,
     TechupdateComponent,
-    AddresourceComponent
+    AddresourceComponent,
+    ResourceslistComponent
   ],
   imports: [
     BrowserModule,

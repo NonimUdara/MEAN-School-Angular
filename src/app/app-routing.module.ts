@@ -23,6 +23,7 @@ import { BiolistComponent } from './components/biolist/biolist.component';
 import { MathscrudComponent } from './components/mathscrud/mathscrud.component';
 import { BiocrudComponent } from './components/biocrud/biocrud.component';
 import { AddartsComponent } from './components/addarts/addarts.component';
+import { ArtslistComponent } from './components/artslist/artslist.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -47,7 +48,8 @@ const routes: Routes = [
   {path: 'biolist', component: BiolistComponent},
   {path: 'mathscrud', component: MathscrudComponent},
   {path: 'biocrud', component:BiocrudComponent},
-  {path: 'addarts', component:AddartsComponent}
+  {path: 'addarts', component:AddartsComponent},
+  {path: 'artslist', component:ArtslistComponent}
 ];
 
 @NgModule({

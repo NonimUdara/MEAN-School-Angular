@@ -8,7 +8,7 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class TechcrudService {
 
-  REST_API:string = "http://localhost:3000/tech";
+  REST_API:string = "http://localhost:3000/technology";
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json')
 
   authToken: any;

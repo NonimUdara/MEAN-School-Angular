@@ -1,0 +1,32 @@
+<h2 class="h2" style="text-align: center; margin-bottom: 50px;">All Technology Meeting List</h2>
+<div class="container" style="margin-top: -50px;">
+    <div class="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+    </div>
+    <div class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Title</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Link</th>
+                <th scope="col">Id</th>
+                <th scope="col">passcode</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let meetig of Meeting; let i = index">
+                <td>{{meetig.name}}</td>
+                <td>{{meetig.date}}</td>
+                <td>{{meetig.title}}</td>
+                <td>{{meetig.duration}}</td>
+                <td>{{meetig.link}}</td>
+                <td>{{meetig.id}}</td>
+                <td>{{meetig.passcode}}</td>                
+            </tr>
+        </tbody>
+    </div>   
+</div>
+<!-- <div style="margin-top: 10px; margin-bottom: 10px;">
+    <a class="btn btn-info" href="teacherdashboard" role="button">Go Back <<</a>
+</div> -->

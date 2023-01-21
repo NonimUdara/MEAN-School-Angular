@@ -33,6 +33,7 @@ import { CommercelistComponent } from './components/commercelist/commercelist.co
 import { CommercecrudComponent } from './components/commercecrud/commercecrud.component';
 import { CommerceupdateComponent } from './components/commerceupdate/commerceupdate.component';
 import { AddtechComponent } from './components/addtech/addtech.component';
+import { TechlistComponent } from './components/techlist/techlist.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -67,7 +68,8 @@ const routes: Routes = [
   {path: 'commercelist', component:CommercelistComponent},
   {path: 'commercecrud', component:CommercecrudComponent},
   {path: 'commerceupdate/:id', component:CommerceupdateComponent},
-  {path: 'addtech', component:AddtechComponent}
+  {path: 'addtech', component:AddtechComponent},
+  {path: 'techlist', component:TechlistComponent}
 ];
 
 @NgModule({

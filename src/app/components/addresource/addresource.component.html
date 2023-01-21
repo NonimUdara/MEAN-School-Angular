@@ -1,0 +1,35 @@
+<h2 class="h2" style="text-align: center; margin-bottom: 50px;">Add Resources</h2>
+<form class="card" style="padding: 30px;"(submit) = "onRegisterSubmit()">
+    <div class="form-group">
+        <label class="control-label col-sm-2">Name</label>
+        <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Enter Your Name">
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-4">Resource Name</label>
+        <input type="text" [(ngModel)]="rname" name="rname" class="form-control"placeholder="Enter Resource Name">
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2">Subject</label>
+        <input type="text" [(ngModel)]="subject" name="subject" class="form-control" placeholder="Enter Subject">
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2">Stream</label>
+        <input type="text" [(ngModel)]="stream" name="stream" class="form-control" placeholder="Enter Stream">
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2">Author</label>
+        <input type="text" [(ngModel)]="author" name="author" class="form-control" placeholder="Enter Author">
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2">PDF Link</label>
+        <input type="text" [(ngModel)]="link" name="link" class="form-control" placeholder="Enter PDF Link">
+    </div>
+    <div class="">
+        <div class="col-12" style="text-align: center;">
+            <button type="submit" class="btn btn-primary btn-lg w-100" style="margin-bottom: 20px;">Add Resource</button>
+        </div>
+    </div>
+</form>
+<div style="margin-top: 10px; margin-bottom: 10px;">
+    <a class="btn btn-info" href="teacherdashboard" role="button">Go Back <<</a>
+</div>

@@ -31,6 +31,14 @@ export class ValidateService {
     }
   }
 
+  validateResources(resources: {  name: any; rname: any; subject: any; stream: any; author: any; link: any;}){
+    if( resources.name == undefined || resources.rname == undefined || resources.subject == undefined || resources.stream == undefined || resources.author == undefined || resources.link == undefined){
+      return false;
+    } else {
+      return true;
+    }
+  }
+
 
   validateEmail(email: any){
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

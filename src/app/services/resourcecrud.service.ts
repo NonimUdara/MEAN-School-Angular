@@ -6,28 +6,27 @@ import { catchError, map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class MathscrudService {
+export class ResourcecrudService {
 
-  REST_API:string = "http://localhost:3000/maths";
+  REST_API:string = "http://localhost:3000/resources";
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json')
 
   authToken: any;
-  maths: any;
+  resources: any;
 
   constructor(private http:HttpClient) { }
 
-  add(maths: { 
+  add(resources: { 
     name: String | undefined;
-    date: String | undefined;
-    title: String | undefined;
-    duration: String | undefined;
-    link: String | undefined;
-    id: String | undefined;
-    passcode: String | undefined; 
+    rname: String | undefined;
+    subject: String | undefined;
+    stream: String | undefined;
+    author: String | undefined;
+    link: String | undefined; 
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/maths/add', maths,{headers: headers})
+    return this.http.post('http://localhost:3000/resources/add', resources,{headers: headers})
     .pipe(map(response => response ));
   }
 

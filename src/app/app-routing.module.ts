@@ -36,6 +36,7 @@ import { AddtechComponent } from './components/addtech/addtech.component';
 import { TechlistComponent } from './components/techlist/techlist.component';
 import { TechcrudComponent } from './components/techcrud/techcrud.component';
 import { TechupdateComponent } from './components/techupdate/techupdate.component';
+import { AddresourceComponent } from './components/addresource/addresource.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -73,7 +74,8 @@ const routes: Routes = [
   {path: 'addtech', component:AddtechComponent},
   {path: 'techlist', component:TechlistComponent},
   {path: 'techcrud', component:TechcrudComponent},
-  {path: 'techupdate/:id', component:TechupdateComponent}
+  {path: 'techupdate/:id', component:TechupdateComponent},
+  {path: 'addresources', component:AddresourceComponent}
 ];
 
 @NgModule({

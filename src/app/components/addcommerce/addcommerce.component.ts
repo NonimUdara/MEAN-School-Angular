@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidateService } from '../../services/validate.service';
-import { BiocrudService } from '../../services/biocrud.service';
+import { CommercecrudService } from '../../services/commercecrud.service';
 import { FlashMessagesService } from 'flash-messages-angular';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-addbio',
-  templateUrl: './addbio.component.html',
-  styleUrls: ['./addbio.component.css']
+  selector: 'app-addcommerce',
+  templateUrl: './addcommerce.component.html',
+  styleUrls: ['./addcommerce.component.css']
 })
-export class AddbioComponent implements OnInit {
+export class AddcommerceComponent implements OnInit {
 
   name: String | undefined;
   date: String | undefined;
@@ -24,7 +24,7 @@ export class AddbioComponent implements OnInit {
 
     private validateService: ValidateService, 
     private flashMessage:FlashMessagesService,
-    private authService:BiocrudService,
+    private authService:CommercecrudService,
     private router:Router
 
   ) {}
@@ -57,7 +57,7 @@ export class AddbioComponent implements OnInit {
         this.router.navigate(['teacherdashboard']);
       } else {
         this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
-        this.router.navigate(['addbio']);
+        this.router.navigate(['addcommerce']);
       }
     });
     }

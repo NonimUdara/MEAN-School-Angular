@@ -28,6 +28,7 @@ import { ArtscrudComponent } from './components/artscrud/artscrud.component';
 import { ArtsupdateComponent } from './components/artsupdate/artsupdate.component';
 import { MathsupdateComponent } from './components/mathsupdate/mathsupdate.component';
 import { BioupdateComponent } from './components/bioupdate/bioupdate.component';
+import { AddcommerceComponent } from './components/addcommerce/addcommerce.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -57,7 +58,8 @@ const routes: Routes = [
   {path: 'artscrud', component:ArtscrudComponent},
   {path: 'artsupdate/:id', component:ArtsupdateComponent},
   {path: 'mathsupdate/:id', component:MathsupdateComponent},
-  {path: 'bioupdate/:id', component:BioupdateComponent}
+  {path: 'bioupdate/:id', component:BioupdateComponent},
+  {path: 'addcommerce', component:AddcommerceComponent}
 ];
 
 @NgModule({

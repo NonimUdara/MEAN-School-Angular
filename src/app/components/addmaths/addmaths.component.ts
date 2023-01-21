@@ -50,14 +50,14 @@ export class AddmathsComponent implements OnInit {
          return;
        }
    
-       // Register user
+       // Add Meeting
        this.authService.add(meeting).subscribe(data => {
          if(data) {
            this.flashMessage.show('Meeting Added Successfully!', {cssClass: 'alert-success', timeout: 3000});
            this.router.navigate(['teacherdashboard']);
          } else {
            this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
-           this.router.navigate(['addbio']);
+           this.router.navigate(['addmaths']);
          }
        });
        }

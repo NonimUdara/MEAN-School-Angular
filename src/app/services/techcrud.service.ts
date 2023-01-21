@@ -6,9 +6,9 @@ import { catchError, map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class MathscrudService {
+export class TechcrudService {
 
-  REST_API:string = "http://localhost:3000/maths";
+  REST_API:string = "http://localhost:3000/tech";
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json')
 
   authToken: any;
@@ -16,7 +16,7 @@ export class MathscrudService {
 
   constructor(private http:HttpClient) { }
 
-  add(maths: { 
+  add(tech: { 
     name: String | undefined;
     date: String | undefined;
     title: String | undefined;
@@ -27,7 +27,7 @@ export class MathscrudService {
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/maths/add', maths,{headers: headers})
+    return this.http.post('http://localhost:3000/technology/add', tech,{headers: headers})
     .pipe(map(response => response ));
   }
 
@@ -68,16 +68,5 @@ export class MathscrudService {
     console.log(errorMessage);
     return throwError(errorMessage);
   }
-
-  // loadToken(){
-  //   const token = localStorage.getItem('id_token');
-  //   this.authToken = token;
-  // }
-
-  // logout(){
-  //   this.authToken = null;
-  //   this.student = null;
-  //   localStorage.clear();
-  // }
 
 }

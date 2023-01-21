@@ -16,7 +16,7 @@ export class CommercecrudService {
 
   constructor(private http:HttpClient) { }
 
-  add(bio: { 
+  add(commerce: { 
     name: String | undefined;
     date: String | undefined;
     title: String | undefined;
@@ -27,7 +27,7 @@ export class CommercecrudService {
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/commerce/add', bio,{headers: headers})
+    return this.http.post('http://localhost:3000/commerce/add', commerce,{headers: headers})
     .pipe(map(response => response ));
   }
 

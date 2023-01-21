@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidateService } from '../../services/validate.service';
-import { MathscrudService } from '../../services/mathscrud.service';
+import { TechcrudService } from '../../services/techcrud.service';
 import { FlashMessagesService } from 'flash-messages-angular';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-addmaths',
-  templateUrl: './addmaths.component.html',
-  styleUrls: ['./addmaths.component.css']
+  selector: 'app-addtech',
+  templateUrl: './addtech.component.html',
+  styleUrls: ['./addtech.component.css']
 })
-export class AddmathsComponent implements OnInit {
+export class AddtechComponent implements OnInit {
 
   name: String | undefined;
   date: String | undefined;
@@ -23,7 +23,7 @@ export class AddmathsComponent implements OnInit {
     
     private validateService: ValidateService, 
     private flashMessage:FlashMessagesService,
-    private authService:MathscrudService,
+    private authService:TechcrudService,
     private router:Router
     
     ) { }
@@ -60,4 +60,5 @@ export class AddmathsComponent implements OnInit {
          }
        });
        }
-  }
+
+}

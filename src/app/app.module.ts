@@ -47,6 +47,8 @@ import { CommercecrudComponent } from './components/commercecrud/commercecrud.co
 import { CommerceupdateComponent } from './components/commerceupdate/commerceupdate.component';
 import { AddtechComponent } from './components/addtech/addtech.component';
 import { TechlistComponent } from './components/techlist/techlist.component';
+import { TechcrudComponent } from './components/techcrud/techcrud.component';
+import { TechupdateComponent } from './components/techupdate/techupdate.component';
 
 const appRoutes : Routes = [
   // {path:'', component: HomeComponent},
@@ -94,7 +96,9 @@ const appRoutes : Routes = [
     CommercecrudComponent,
     CommerceupdateComponent,
     AddtechComponent,
-    TechlistComponent
+    TechlistComponent,
+    TechcrudComponent,
+    TechupdateComponent
   ],
   imports: [
     BrowserModule,

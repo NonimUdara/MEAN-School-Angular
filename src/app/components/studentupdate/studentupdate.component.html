@@ -23,7 +23,14 @@
     </div>
     <div class="form-group">
         <label for="TextInput">Following Stream</label>
-        <input class="form-control" type="text" formControlName="stream" required>
+        <!-- <input class="form-control" type="text" formControlName="stream" required> -->
+        <select class="form-select" aria-label="Default select example" formControlName="stream" >
+            <option value="Maths">Maths</option>
+            <option value="Bio">Bio</option>
+            <option value="Arts">Arts</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Technology">Technology</option>
+        </select>
     </div>
     <div class="form-group">
         <label for="TextInput">Year Of Exam</label>

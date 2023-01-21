@@ -29,14 +29,15 @@ import { ArtsupdateComponent } from './components/artsupdate/artsupdate.componen
 import { MathsupdateComponent } from './components/mathsupdate/mathsupdate.component';
 import { BioupdateComponent } from './components/bioupdate/bioupdate.component';
 import { AddcommerceComponent } from './components/addcommerce/addcommerce.component';
+import { CommercelistComponent } from './components/commercelist/commercelist.component';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent},
-  {path:'studentregister', component: RegisterComponent},
-  {path:'studentlogin', component: LoginComponent},
-  {path:'profile', component: ProfileComponent},
-  {path:'studentslist', component: StudentslistComponent},
-  {path:'studentupdate/:id', component: StudentupdateComponent},
+  {path: '', component: HomeComponent},
+  {path: 'studentregister', component: RegisterComponent},
+  {path: 'studentlogin', component: LoginComponent},
+  {path: 'profile', component: ProfileComponent},
+  {path: 'studentslist', component: StudentslistComponent},
+  {path: 'studentupdate/:id', component: StudentupdateComponent},
   {path: 'adminlogin', component: AdminloginComponent},
   {path: 'admindashboard', component: AdmindashboardComponent},
   {path: 'teacherlogin', component: TeacherloginComponent},
@@ -59,7 +60,8 @@ const routes: Routes = [
   {path: 'artsupdate/:id', component:ArtsupdateComponent},
   {path: 'mathsupdate/:id', component:MathsupdateComponent},
   {path: 'bioupdate/:id', component:BioupdateComponent},
-  {path: 'addcommerce', component:AddcommerceComponent}
+  {path: 'addcommerce', component:AddcommerceComponent},
+  {path: 'commercelist', component:CommercelistComponent}
 ];
 
 @NgModule({

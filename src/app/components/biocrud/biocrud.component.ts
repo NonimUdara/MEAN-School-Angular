@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { MathscrudService } from '../../services/mathscrud.service';
+import { BiocrudService } from '../../services/biocrud.service';
 
 @Component({
-  selector: 'app-mathscrud',
-  templateUrl: './mathscrud.component.html',
-  styleUrls: ['./mathscrud.component.css']
+  selector: 'app-biocrud',
+  templateUrl: './biocrud.component.html',
+  styleUrls: ['./biocrud.component.css']
 })
-export class MathscrudComponent implements OnInit {
+export class BiocrudComponent implements OnInit {
 
   Meeting:any =[];
-  constructor(private crudApi:MathscrudService) { }
+  constructor(private crudApi:BiocrudService) { }
 
   ngOnInit(): void {
     this.crudApi.get().subscribe(res=>{

@@ -1,1 +1,35 @@
-<p>mathsupdate works!</p>
+<h2 class="h2" style="text-align: center; margin-bottom: 50px;">Udate Meeting From Here!</h2>
+<form class="card" style="padding: 30px;" [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+    <div class="form-group">
+        <label for="TextInput">Name</label>
+        <input class="form-control" type="text" formControlName="name" required>
+    </div>
+    <div class="form-group">
+        <label for="TextInput">Date</label>
+        <input class="form-control" type="date" formControlName="date" required>
+    </div>
+    <div class="form-group">
+        <label for="TextInput">Title</label>
+        <input class="form-control" type="text" formControlName="title" required>
+    </div>
+    <div class="form-group">
+        <label for="TextInput">Duration</label>
+        <input class="form-control" type="text" formControlName="duration" required>
+    </div>
+    <div class="form-group">
+        <label for="TextInput">Link</label>
+        <input class="form-control" type="text" formControlName="link" required>
+    </div>
+    <div class="form-group">
+        <label for="TextInput">ID</label>
+        <input class="form-control" type="text" formControlName="id" required>
+    </div>
+    <div class="form-group">
+        <label for="TextInput">Passcode</label>
+        <input class="form-control" type="text" formControlName="passcode" required>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Update</button>
+</form>
+<div style="margin-top: 10px; margin-bottom: 10px;">
+    <a class="btn btn-info" href="mathscrud" role="button">Go Back <<</a>
+</div>

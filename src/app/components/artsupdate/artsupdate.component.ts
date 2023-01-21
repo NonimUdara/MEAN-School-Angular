@@ -49,10 +49,10 @@ export class ArtsupdateComponent implements OnInit {
   onUpdate(){
     this.authservice.update(this.getId, this.updateForm.value).subscribe(res=>{
       console.log("Data Updated Success Full");
-      this.flashMessage.show('Student Updated Successfully', {
+      this.flashMessage.show('Meeting Updated Successfully', {
         cssClass: 'alert-success',
         timeout: 5000});
-      this.ngZone.run(()=>{this.router.navigateByUrl('/studentslist')})
+      this.ngZone.run(()=>{this.router.navigateByUrl('/artscrud')})
     },(err)=>{
       console.log(err)
     })

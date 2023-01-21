@@ -25,6 +25,7 @@ import { BiocrudComponent } from './components/biocrud/biocrud.component';
 import { AddartsComponent } from './components/addarts/addarts.component';
 import { ArtslistComponent } from './components/artslist/artslist.component';
 import { ArtscrudComponent } from './components/artscrud/artscrud.component';
+import { ArtsupdateComponent } from './components/artsupdate/artsupdate.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -51,7 +52,8 @@ const routes: Routes = [
   {path: 'biocrud', component:BiocrudComponent},
   {path: 'addarts', component:AddartsComponent},
   {path: 'artslist', component:ArtslistComponent},
-  {path: 'artscrud', component:ArtscrudComponent}
+  {path: 'artscrud', component:ArtscrudComponent},
+  {path: 'artsupdate/:id', component:ArtsupdateComponent}
 ];
 
 @NgModule({

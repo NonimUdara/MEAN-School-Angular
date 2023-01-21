@@ -1,51 +1,53 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from '../../services/Student-crudauth.service';
+import { ArtscrudService } from '../../services/artscrud.service';
 import { FlashMessagesService } from 'flash-messages-angular';
 
 @Component({
-  selector: 'app-studentupdate',
-  templateUrl: './studentupdate.component.html',
-  styleUrls: ['./studentupdate.component.css']
+  selector: 'app-artsupdate',
+  templateUrl: './artsupdate.component.html',
+  styleUrls: ['./artsupdate.component.css']
 })
-export class StudentupdateComponent implements OnInit {
-  
+export class ArtsupdateComponent implements OnInit {
+
   getId: any;
   updateForm: any;
   constructor(private formBuilder: FormBuilder,
     private router: Router,
     private ngZone: NgZone,
     private activatedRoute: ActivatedRoute,
-    private authservice: AuthService,
+    private authservice: ArtscrudService,
     private flashMessage: FlashMessagesService
     ) {
       this.getId = this.activatedRoute.snapshot.paramMap.get('id');
-      this.authservice.getStudent(this.getId).subscribe(res => {
+      this.authservice.getMeeting(this.getId).subscribe(res => {
         this.updateForm.setValue({
           name: res['name'],
-          index: res['index'],
-          stream: res['stream'],
-          year: res['year'],
-          email: res['email'],
-          nic: res['nic'],
+          date: res['date'],
+          title: res['title'],
+          duration: res['duration'],
+          link: res['link'],
+          id: res['id'],
+          passcode: res['passcode'],
           
         })
       });
       this.updateForm = this.formBuilder.group({
         name: [''],
-        index: [''],
-        stream: [''],
-        year: [''],
-        email: [''],
-        nic: [''],
+        date: [''],
+        title: [''],
+        duration: [''],
+        link: [''],
+        id: [''],
+        passcode: [''],
 
       })
   }
 
   ngOnInit(): void { }
   onUpdate(){
-    this.authservice.updateStudent(this.getId, this.updateForm.value).subscribe(res=>{
+    this.authservice.update(this.getId, this.updateForm.value).subscribe(res=>{
       console.log("Data Updated Success Full");
       this.flashMessage.show('Student Updated Successfully', {
         cssClass: 'alert-success',

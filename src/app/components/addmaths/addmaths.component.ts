@@ -53,7 +53,7 @@ export class AddmathsComponent implements OnInit {
        // Register user
        this.authService.add(meeting).subscribe(data => {
          if(data) {
-           this.flashMessage.show('You are now registered and can now login', {cssClass: 'alert-success', timeout: 3000});
+           this.flashMessage.show('Meeting Added Successfully!', {cssClass: 'alert-success', timeout: 3000});
            this.router.navigate(['teacherdashboard']);
          } else {
            this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});

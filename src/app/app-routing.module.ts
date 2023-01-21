@@ -27,6 +27,7 @@ import { ArtslistComponent } from './components/artslist/artslist.component';
 import { ArtscrudComponent } from './components/artscrud/artscrud.component';
 import { ArtsupdateComponent } from './components/artsupdate/artsupdate.component';
 import { MathsupdateComponent } from './components/mathsupdate/mathsupdate.component';
+import { BioupdateComponent } from './components/bioupdate/bioupdate.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -55,7 +56,8 @@ const routes: Routes = [
   {path: 'artslist', component:ArtslistComponent},
   {path: 'artscrud', component:ArtscrudComponent},
   {path: 'artsupdate/:id', component:ArtsupdateComponent},
-  {path: 'mathsupdate/:id', component:MathsupdateComponent}
+  {path: 'mathsupdate/:id', component:MathsupdateComponent},
+  {path: 'bioupdate/:id', component:BioupdateComponent}
 ];
 
 @NgModule({

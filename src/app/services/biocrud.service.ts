@@ -35,7 +35,7 @@ export class BiocrudService {
     return this.http.get(`${this.REST_API}`);
   }
 
-  getStudent(id:any) :Observable<any>{
+  getMeeting(id:any) :Observable<any>{
     let API_URL = `${this.REST_API}/read/${id}`;
     return this.http.get(API_URL,{headers:this.httpHeaders}).pipe(map((res:any)=>{
       return res || {}

@@ -39,6 +39,7 @@ import { BioupdateComponent } from './components/bioupdate/bioupdate.component';
 import { MathsupdateComponent } from './components/mathsupdate/mathsupdate.component';
 import { AddartsComponent } from './components/addarts/addarts.component';
 import { ArtslistComponent } from './components/artslist/artslist.component';
+import { ArtscrudComponent } from './components/artscrud/artscrud.component';
 
 const appRoutes : Routes = [
   // {path:'', component: HomeComponent},
@@ -78,7 +79,8 @@ const appRoutes : Routes = [
     BioupdateComponent,
     MathsupdateComponent,
     AddartsComponent,
-    ArtslistComponent
+    ArtslistComponent,
+    ArtscrudComponent
   ],
   imports: [
     BrowserModule,

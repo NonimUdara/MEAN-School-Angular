@@ -31,30 +31,6 @@ export class MathscrudService {
     .pipe(map(response => response ));
   }
 
-  // authenticateStudent(student: { index: String; password: String; }){
-  //   let headers = new HttpHeaders();
-  //   headers.append('Content-Type', 'application/json');
-  //   return this.http.post('http://localhost:3000/students/authenticate', student,{headers: headers})
-  //   .pipe(map(response => response ));
-  // }
-
-  // getProfile(){
-  //   this.loadToken();
-  //   const headers = new HttpHeaders({
-  //     'Content-Type': 'application/json',
-  //     'Authorization': this.authToken
-  //   });
-  //   return this.http.get('http://localhost:3000/students/profile', {headers: headers})
-  //   .pipe(map(response => response ));
-  // }
-
-  // storeStudentData(token: any, student: any){
-  //   localStorage.setItem('id_token', token);
-  //   localStorage.setItem('student', JSON.stringify(student));
-  //   this.authToken = token;
-  //   this.student = student;
-  // }
-
   get(){
     return this.http.get(`${this.REST_API}`);
   }

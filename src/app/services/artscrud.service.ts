@@ -6,9 +6,9 @@ import { catchError, map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class BiocrudService {
+export class ArtscrudService {
 
-  REST_API:string = "http://localhost:3000/bio";
+  REST_API:string = "http://localhost:3000/arts";
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json')
 
   authToken: any;
@@ -16,7 +16,7 @@ export class BiocrudService {
 
   constructor(private http:HttpClient) { }
 
-  add(bio: { 
+  add(arts: { 
     name: String | undefined;
     date: String | undefined;
     title: String | undefined;
@@ -27,7 +27,7 @@ export class BiocrudService {
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/bio/add', bio,{headers: headers})
+    return this.http.post('http://localhost:3000/arts/add', arts,{headers: headers})
     .pipe(map(response => response ));
   }
 
@@ -68,16 +68,5 @@ export class BiocrudService {
     console.log(errorMessage);
     return throwError(errorMessage);
   }
-
-  // loadToken(){
-  //   const token = localStorage.getItem('id_token');
-  //   this.authToken = token;
-  // }
-
-  // logout(){
-  //   this.authToken = null;
-  //   this.student = null;
-  //   localStorage.clear();
-  // }
 
 }

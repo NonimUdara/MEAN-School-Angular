@@ -31,6 +31,7 @@ import { BioupdateComponent } from './components/bioupdate/bioupdate.component';
 import { AddcommerceComponent } from './components/addcommerce/addcommerce.component';
 import { CommercelistComponent } from './components/commercelist/commercelist.component';
 import { CommercecrudComponent } from './components/commercecrud/commercecrud.component';
+import { CommerceupdateComponent } from './components/commerceupdate/commerceupdate.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -63,7 +64,8 @@ const routes: Routes = [
   {path: 'bioupdate/:id', component:BioupdateComponent},
   {path: 'addcommerce', component:AddcommerceComponent},
   {path: 'commercelist', component:CommercelistComponent},
-  {path: 'commercecrud', component:CommercecrudComponent}
+  {path: 'commercecrud', component:CommercecrudComponent},
+  {path: 'commerceupdate/:id', component:CommerceupdateComponent}
 ];
 
 @NgModule({

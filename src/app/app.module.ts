@@ -44,6 +44,7 @@ import { ArtsupdateComponent } from './components/artsupdate/artsupdate.componen
 import { AddcommerceComponent } from './components/addcommerce/addcommerce.component';
 import { CommercelistComponent } from './components/commercelist/commercelist.component';
 import { CommercecrudComponent } from './components/commercecrud/commercecrud.component';
+import { CommerceupdateComponent } from './components/commerceupdate/commerceupdate.component';
 
 const appRoutes : Routes = [
   // {path:'', component: HomeComponent},
@@ -88,7 +89,8 @@ const appRoutes : Routes = [
     ArtsupdateComponent,
     AddcommerceComponent,
     CommercelistComponent,
-    CommercecrudComponent
+    CommercecrudComponent,
+    CommerceupdateComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+<h2 class="h2" style="text-align: center; margin-bottom: 50px;">All Arts Meeting List with Update & Delete!</h2>
+<div class="container" style="margin-top: -50px;">
+    <div class="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+    </div>
+    <div class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Title</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Zoom Link</th>
+                <th scope="col">Meeting Id</th>
+                <th scope="col">Meeting Passcode</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let meeting of Meeting; let i = index">
+                <td>{{meeting.name}}</td>
+                <td>{{meeting.date}}</td>
+                <td>{{meeting.title}}</td>
+                <td>{{meeting.duration}}</td>
+                <td>{{meeting.link}}</td>
+                <td>{{meeting.id}}</td>
+                <td>{{meeting.passcode}}</td>
+                <td class="text-center">
+                    <button class="btn btn-sm btn-primary" routerLink="/commerceupdate/{{meeting._id}}" style="margin-right: 10px;">Edit</button>
+                    <button class="btn btn-sm btn-danger" (click)="delete(meeting._id,1)">Delete</button>
+                </td>                
+            </tr>
+        </tbody>
+    </div>   
+</div>
+<div style="margin-top: 10px; margin-bottom: 10px;">
+    <a class="btn btn-info" href="admindashboard" role="button">Go Back <<</a>
+</div>

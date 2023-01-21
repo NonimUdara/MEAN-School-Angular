@@ -12,39 +12,43 @@
 <form class="card" style="padding: 30px;"(submit) = "onRegisterSubmit()">
     <div class="form-group">
         <label for="TextInput">Name</label>
-        <input type="text" class="form-control" [(ngModel)]="name" name="name">
+        <input type="text" class="form-control" [(ngModel)]="name" name="name" placeholder="Enter Name">
     </div>
     <div class="form-group">
         <label for="TextInput">Gender</label>
-        <input type="text" class="form-control" [(ngModel)]="gender" name="gender">
+        <!-- <input type="text" class="form-control" [(ngModel)]="gender" name="gender" placeholder="Enter Gender"> -->
+        <select class="form-select" aria-label="Default select example" [(ngModel)]="gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
     </div>
     <div class="form-group">
         <label for="TextInput">Age</label>
-        <input type="text" class="form-control" [(ngModel)]="age" name="age">
+        <input type="text" class="form-control" [(ngModel)]="age" name="age" placeholder="Enter Gender">
     </div>
     <div class="form-group">
         <label for="TextInput">Years Worked</label>
-        <input type="text" class="form-control" [(ngModel)]="worked" name="worked">
+        <input type="text" class="form-control" [(ngModel)]="worked" name="worked" placeholder="Enter Gender">
     </div>
     <div class="form-group">
         <label for="TextInput">Teaching Subject</label>
-        <input type="text" class="form-control" [(ngModel)]="subject" name="subject">
+        <input type="text" class="form-control" [(ngModel)]="subject" name="subject" placeholder="Enter Subject">
     </div>
     <div class="form-group">
         <label for="TextInput">NIC</label>
-        <input type="text" class="form-control" [(ngModel)]="nic" name="nic">
+        <input type="text" class="form-control" [(ngModel)]="nic" name="nic" placeholder="Enter NIC Number">
     </div>
     <div class="form-group">
         <label for="TextInput">Email</label>
-        <input type="text" class="form-control" [(ngModel)]="email" name="email">
+        <input type="text" class="form-control" [(ngModel)]="email" name="email" placeholder="Enter Email">
     </div>
     <div class="form-group">
         <label for="TextInput">Username</label>
-        <input type="text" class="form-control" [(ngModel)]="username" name="username">
+        <input type="text" class="form-control" [(ngModel)]="username" name="username" placeholder="Enter Username">
     </div>
     <div class="form-group">
         <label for="TextInput">Password</label>
-        <input type="password" class="form-control" [(ngModel)]="password" name="password">
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Enter Password">
     </div>
     <button type="submit" class="btn btn-primary w-100">Register</button>
 </form>

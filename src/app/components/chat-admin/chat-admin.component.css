@@ -1,9 +1,10 @@
 .chat-messages-show-container{
-    background-color: #bbb8b8;
+    background-color: #1e3141;
     height: 400px;
     display: flex;
     flex-direction: column;
     overflow: auto;
+    border-radius: 5px;
 }
 
 .chat-message-show-list{
@@ -13,7 +14,7 @@
 }
 
 .chat-message-create-container{
-    background: #616161;
+    background: #1e3141;
     height: 100px;
     display: flex;
     flex-direction: center;
@@ -22,9 +23,12 @@ input{
     padding: 12px;
     margin: 25px 30px;
     flex: 2;
+    border-radius: 5px;
 }
 button{
     height: 35px;
+    border-radius: 5px;
     margin: auto;
-    width: 50px;
+    width: 100px;
+    margin-right: 10px;
 }

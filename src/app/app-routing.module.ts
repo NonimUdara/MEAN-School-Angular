@@ -17,7 +17,6 @@ import { TeacherupdateComponent } from './components/teacherupdate/teacherupdate
 import { TeacherprofileComponent } from './components/teacherprofile/teacherprofile.component';
 import { AddmathsComponent } from './components/addmaths/addmaths.component';
 import { MathslistComponent } from './components/mathslist/mathslist.component';
-import { ChatBoxComponent } from './components/chat-box/chat-box.component';
 import { AddbioComponent } from './components/addbio/addbio.component';
 import { BiolistComponent } from './components/biolist/biolist.component';
 import { MathscrudComponent } from './components/mathscrud/mathscrud.component';
@@ -40,6 +39,9 @@ import { AddresourceComponent } from './components/addresource/addresource.compo
 import { ResourceslistComponent } from './components/resourceslist/resourceslist.component';
 import { ResourcecrudComponent } from './components/resourcecrud/resourcecrud.component';
 import { ResourceupdateComponent } from './components/resourceupdate/resourceupdate.component';
+import { ChatAdminComponent } from './components/chat-admin/chat-admin.component';
+import { ChatStudentComponent } from './components/chat-student/chat-student.component';
+import { ChatTeacherComponent } from './components/chat-teacher/chat-teacher.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -59,7 +61,6 @@ const routes: Routes = [
   {path: 'teacherprofile', component: TeacherprofileComponent },
   {path: 'addmaths', component: AddmathsComponent},
   {path: 'mathslist', component: MathslistComponent},
-  {path: 'chatbox', component: ChatBoxComponent},
   {path: 'addbio', component: AddbioComponent},
   {path: 'biolist', component: BiolistComponent},
   {path: 'mathscrud', component: MathscrudComponent},
@@ -81,7 +82,10 @@ const routes: Routes = [
   {path: 'addresources', component:AddresourceComponent},
   {path: 'resourceslist', component:ResourceslistComponent},
   {path: 'resourcescrud', component:ResourcecrudComponent},
-  {path: 'resourceupdate/:id', component:ResourceupdateComponent}
+  {path: 'resourceupdate/:id', component:ResourceupdateComponent},
+  {path: 'chatadmin', component:ChatAdminComponent},
+  {path: 'chatstudent', component:ChatStudentComponent},
+  {path: 'chatteacher', component:ChatTeacherComponent}
 ];
 
 @NgModule({

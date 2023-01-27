@@ -1,0 +1,16 @@
+<h1 style="font-size: 30px; align-items: center; text-align: center; margin-top: -30px; margin-bottom: 40px;">
+    Teacher Chat Dashboard!
+</h1>
+
+<div class="chat-message" style="margin-bottom: 100px;">
+    <div class="chat-messages-show-container">
+        <ul class="chat-message-show-list" id="message-list" >
+
+        </ul>
+        <div class="chat-message-create-container">
+            <input type="text" class="chat-messages-create-container" [(ngModel)]="message">
+            <button type="button" class="btn btn-success" (click)="sendMsg()" style="margin-left: -20px;">Send</button>
+        </div>
+        
+    </div>
+</div>

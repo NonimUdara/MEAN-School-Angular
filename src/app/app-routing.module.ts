@@ -43,6 +43,7 @@ import { ChatAdminComponent } from './components/chat-admin/chat-admin.component
 import { ChatStudentComponent } from './components/chat-student/chat-student.component';
 import { ChatTeacherComponent } from './components/chat-teacher/chat-teacher.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
+import { ContactuslistComponent } from './components/contactuslist/contactuslist.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -87,7 +88,8 @@ const routes: Routes = [
   {path: 'chatadmin', component:ChatAdminComponent},
   {path: 'chatstudent', component:ChatStudentComponent},
   {path: 'chatteacher', component:ChatTeacherComponent},
-  {path: 'contactus', component:ContactusComponent}
+  {path: 'contactus', component:ContactusComponent},
+  {path: 'contactuslist', component:ContactuslistComponent}
 ];
 
 @NgModule({

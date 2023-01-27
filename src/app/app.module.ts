@@ -55,6 +55,7 @@ import { ChatAdminComponent } from './components/chat-admin/chat-admin.component
 import { ChatStudentComponent } from './components/chat-student/chat-student.component';
 import { ChatTeacherComponent } from './components/chat-teacher/chat-teacher.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
+import { ContactuslistComponent } from './components/contactuslist/contactuslist.component';
 
 @NgModule({
   declarations: [
@@ -103,7 +104,8 @@ import { ContactusComponent } from './components/contactus/contactus.component';
     ChatAdminComponent,
     ChatStudentComponent,
     ChatTeacherComponent,
-    ContactusComponent
+    ContactusComponent,
+    ContactuslistComponent
   ],
   imports: [
     BrowserModule,

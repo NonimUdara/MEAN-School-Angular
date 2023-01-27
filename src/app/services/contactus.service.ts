@@ -26,5 +26,9 @@ export class ContactusService {
     return this.http.post(`${this.REST_API}/add`, contactus,{headers: headers})
     .pipe(map(response => response ));
   }
+
+  get(){
+    return this.http.get(`${this.REST_API}`);
+  }
   
 }

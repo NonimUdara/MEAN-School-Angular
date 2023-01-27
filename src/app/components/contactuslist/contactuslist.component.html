@@ -1,0 +1,21 @@
+<h2 class="h2" style="text-align: center; margin-bottom: 50px;">All Contact Us List!</h2>
+<div class="container" style="margin-top: -50px;">
+    <div class="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+    </div>
+    <div class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let resources of Contactus; let i = index">
+                <td>{{resources.name}}</td>
+                <td>{{resources.email}}</td>
+                <td>{{resources.message}}</td>             
+            </tr>
+        </tbody>
+    </div>   
+</div>

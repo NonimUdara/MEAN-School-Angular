@@ -7,8 +7,8 @@ export class ValidateService {
 
   constructor() { }
 
-  validateStudentRegister(student: { name: any; index: any; stream: any; year: any; email: any; nic: any; password: any; }){
-    if(student.name == undefined || student.index == undefined || student.stream == undefined || student.year == undefined || student.email == undefined || student.nic == undefined || student.password == undefined){
+  validateStudentRegister(student: { name: any; index: any; stream: any; phone: any; email: any; nic: any; password: any; }){
+    if(student.name == undefined || student.index == undefined || student.stream == undefined || student.phone == undefined || student.email == undefined || student.nic == undefined || student.password == undefined){
       return false;
     } else {
       return true;

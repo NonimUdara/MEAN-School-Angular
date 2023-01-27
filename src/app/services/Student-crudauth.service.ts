@@ -20,7 +20,7 @@ export class AuthService {
     name: String | undefined;
     index: String | undefined;
     stream: String | undefined;
-    year: String | undefined;
+    phone: String | undefined;
     email: String | undefined;
     nic: String | undefined;
     password: String | undefined; 

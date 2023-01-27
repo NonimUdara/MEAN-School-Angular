@@ -28,8 +28,8 @@ export class AdminloginComponent implements OnInit {
     // }
   }
 
-  onAdminLogin() {
-    const student = {
+  onLoginSubmit() {
+    const admin = {
       username: this.username,
       password: this.password,
     }

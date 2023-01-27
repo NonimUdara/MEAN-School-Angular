@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
   name: String | undefined;
   index: String | undefined;
   stream: String | undefined;
-  year: String | undefined;
+  phone: String | undefined;
   email: String | undefined;
   nic: String | undefined;
   password: String | undefined;
@@ -41,7 +41,7 @@ export class RegisterComponent implements OnInit {
       name: this.name,
       index: this.index,
       stream: this.stream,
-      year: this.year,
+      phone: this.phone,
       email: this.email,
       nic: this.nic,
       password: this.password

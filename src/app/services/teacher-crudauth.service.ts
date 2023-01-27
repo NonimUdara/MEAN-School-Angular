@@ -20,7 +20,7 @@ export class AuthService {
 
     name: String | undefined;
     gender: String | undefined;
-    age: String | undefined;
+    phone: String | undefined;
     worked: String | undefined;
     subject: String | undefined;
     nic: String | undefined;
@@ -33,7 +33,6 @@ export class AuthService {
     headers.append('Content-Type', 'application/json');
     return this.http.post(`${this.REST_API}/register`, teacher,{headers: headers})
     .pipe(map(response => response ));
-    //.pipe(map((response: any) => response.json()));
   }
 
   authenticateTeacher(teacher: { 
@@ -46,11 +45,9 @@ export class AuthService {
     headers.append('Content-Type', 'application/json');
     return this.http.post(`${this.REST_API}/authenticate`, teacher,{headers: headers})
     .pipe(map(response => response ));
-    //.pipe(map((response: any) => response.json()));
   }
 
   getProfile(){
-    //let headers = new HttpHeaders();
     this.loadToken();
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -65,13 +62,12 @@ export class AuthService {
       console.log("response :", response); 
       return response;
     } ));
-    //.pipe(map((response: any) => response.json()));
   }
 
-  storeTeacherData(token2: any, teacher: any){
-    localStorage.setItem('id_token', token2);
+  storeTeacherData(token: any, teacher: any){
+    localStorage.setItem('id_token', token);
     localStorage.setItem('teacher', JSON.stringify(teacher));
-    this.authToken = token2;
+    this.authToken = token;
     this.teacher = teacher;
   }
 

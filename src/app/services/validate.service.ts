@@ -15,8 +15,8 @@ export class ValidateService {
     }
   }
 
-  validateTeacherRegister(teacher: {  name: any; gender: any; age: any; worked: any; subject: any; nic: any; email: any; username: any;  password: any; }){
-    if( teacher.name == undefined || teacher.gender == undefined || teacher.age == undefined || teacher.worked == undefined || teacher.subject == undefined || teacher.nic == undefined || teacher.email == undefined || teacher.username == undefined  || teacher.password == undefined){
+  validateTeacherRegister(teacher: {  name: any; gender: any; phone: any; worked: any; subject: any; nic: any; email: any; username: any;  password: any; }){
+    if( teacher.name == undefined || teacher.gender == undefined || teacher.phone == undefined || teacher.worked == undefined || teacher.subject == undefined || teacher.nic == undefined || teacher.email == undefined || teacher.username == undefined  || teacher.password == undefined){
       return false;
     } else {
       return true;
@@ -38,7 +38,6 @@ export class ValidateService {
       return true;
     }
   }
-
 
   validateEmail(email: any){
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

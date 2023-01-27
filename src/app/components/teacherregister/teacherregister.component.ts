@@ -13,7 +13,7 @@ export class TeacherregisterComponent implements OnInit {
 
   name: String | undefined;
   gender: String | undefined;
-  age: String | undefined;
+  phone: String | undefined;
   worked: String | undefined;
   subject: String | undefined;
   nic: String | undefined;
@@ -37,7 +37,7 @@ export class TeacherregisterComponent implements OnInit {
     const teacher = {
       name: this.name,
       gender: this.gender,
-      age: this.age,
+      phone: this.phone,
       worked: this.worked,
       subject: this.subject,
       nic: this.nic,
@@ -58,16 +58,6 @@ export class TeacherregisterComponent implements OnInit {
         return;
     }
 
-    // Register user
-    // this.authService.registerTeacher(teacher).subscribe(data => {
-    //   if(data) {
-    //     this.flashMessage.show('Teacher Account Created Successfully!', {cssClass: 'alert-success', timeout: 3000});
-    //     this.router.navigate(['admindashboard']);
-    //   } else {
-    //     this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
-    //     this.router.navigate(['teacherregister']);
-    //   }
-    // });
     this.authService.registerTeacher(teacher).subscribe(() => {
 
       this.flashMessage.show('Teacher Registered Successfully!', { cssClass: 'alert-success', timeout: 3000 });

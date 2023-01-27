@@ -54,6 +54,7 @@ import { ResourceupdateComponent } from './components/resourceupdate/resourceupd
 import { ChatAdminComponent } from './components/chat-admin/chat-admin.component';
 import { ChatStudentComponent } from './components/chat-student/chat-student.component';
 import { ChatTeacherComponent } from './components/chat-teacher/chat-teacher.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -101,7 +102,8 @@ import { ChatTeacherComponent } from './components/chat-teacher/chat-teacher.com
     ResourceupdateComponent,
     ChatAdminComponent,
     ChatStudentComponent,
-    ChatTeacherComponent
+    ChatTeacherComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,

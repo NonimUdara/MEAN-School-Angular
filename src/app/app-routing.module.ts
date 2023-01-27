@@ -42,6 +42,7 @@ import { ResourceupdateComponent } from './components/resourceupdate/resourceupd
 import { ChatAdminComponent } from './components/chat-admin/chat-admin.component';
 import { ChatStudentComponent } from './components/chat-student/chat-student.component';
 import { ChatTeacherComponent } from './components/chat-teacher/chat-teacher.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -85,7 +86,8 @@ const routes: Routes = [
   {path: 'resourceupdate/:id', component:ResourceupdateComponent},
   {path: 'chatadmin', component:ChatAdminComponent},
   {path: 'chatstudent', component:ChatStudentComponent},
-  {path: 'chatteacher', component:ChatTeacherComponent}
+  {path: 'chatteacher', component:ChatTeacherComponent},
+  {path: 'contactus', component:ContactusComponent}
 ];
 
 @NgModule({

@@ -7,6 +7,7 @@ import { AuthService } from '../../services/teacher-crudauth.service';
   styleUrls: ['./teacherslist.component.css']
 })
 export class TeacherslistComponent implements OnInit {
+
   Teachers:any =[];
   constructor(private crudApi:AuthService) {}
 

@@ -31,7 +31,7 @@ export class AuthService {
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/teachers/register', teacher,{headers: headers})
+    return this.http.post(`${this.REST_API}/register`, teacher,{headers: headers})
     .pipe(map(response => response ));
     //.pipe(map((response: any) => response.json()));
   }
@@ -44,7 +44,7 @@ export class AuthService {
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/teachers/authenticate', teacher,{headers: headers})
+    return this.http.post(`${this.REST_API}/authenticate`, teacher,{headers: headers})
     .pipe(map(response => response ));
     //.pipe(map((response: any) => response.json()));
   }
@@ -60,7 +60,7 @@ export class AuthService {
     console.log("headers :", headers);
     console.log("this.authToken :", this.authToken);
     
-    return this.http.get('http://localhost:3000/teachers/profile', {headers: headers})
+    return this.http.get(`${this.REST_API}/profile`, {headers: headers})
     .pipe(map(response => {
       console.log("response :", response); 
       return response;

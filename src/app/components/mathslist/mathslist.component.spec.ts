@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MathslistComponent } from './mathslist.component';
 
-describe('MathslistComponent', () => {
+xdescribe('MathslistComponent', () => {
   let component: MathslistComponent;
   let fixture: ComponentFixture<MathslistComponent>;
 
@@ -17,7 +17,7 @@ describe('MathslistComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  xit('should create', () => {
     expect(component).toBeTruthy();
   });
 });

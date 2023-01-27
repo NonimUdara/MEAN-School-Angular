@@ -27,7 +27,7 @@ export class TechcrudService {
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/technology/add', tech,{headers: headers})
+    return this.http.post(`${this.REST_API}/add`, tech,{headers: headers})
     .pipe(map(response => response ));
   }
 

@@ -27,7 +27,7 @@ export class MathscrudService {
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/maths/add', maths,{headers: headers})
+    return this.http.post(`${this.REST_API}/add`, maths,{headers: headers})
     .pipe(map(response => response ));
   }
 

@@ -26,7 +26,7 @@ export class ResourcecrudService {
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/resources/add', resources,{headers: headers})
+    return this.http.post(`${this.REST_API}/add`, resources,{headers: headers})
     .pipe(map(response => response ));
   }
 

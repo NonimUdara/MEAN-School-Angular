@@ -27,14 +27,14 @@ export class AuthService {
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/students/register', student,{headers: headers})
+    return this.http.post(`${this.REST_API}/register`, student,{headers: headers})
     .pipe(map(response => response ));
   }
 
   authenticateStudent(student: { index: String; password: String; }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/students/authenticate', student,{headers: headers})
+    return this.http.post(`${this.REST_API}/authenticate`, student,{headers: headers})
     .pipe(map(response => response ));
   }
 
@@ -44,7 +44,7 @@ export class AuthService {
       'Content-Type': 'application/json',
       'Authorization': this.authToken
     });
-    return this.http.get('http://localhost:3000/students/profile', {headers: headers})
+    return this.http.get(`${this.REST_API}/profile`, {headers: headers})
     .pipe(map(response => response ));
   }
 

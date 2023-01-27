@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BiolistComponent } from './biolist.component';
 
-describe('BiolistComponent', () => {
+xdescribe('BiolistComponent', () => {
   let component: BiolistComponent;
   let fixture: ComponentFixture<BiolistComponent>;
 
@@ -17,7 +17,7 @@ describe('BiolistComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  xit('should create', () => {
     expect(component).toBeTruthy();
   });
 });

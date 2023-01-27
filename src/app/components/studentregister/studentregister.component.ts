@@ -12,7 +12,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 })
 export class RegisterComponent implements OnInit {
 
-  faUser =faUser;
+  faUser = faUser;
 
   name: String | undefined;
   index: String | undefined;
@@ -24,13 +24,13 @@ export class RegisterComponent implements OnInit {
 
 
   constructor(
-    
-    private validateService: ValidateService, 
-    private flashMessage:FlashMessagesService,
-    private authService:AuthService,
-    private router:Router
-    
-    ) { }
+
+    private validateService: ValidateService,
+    private flashMessage: FlashMessagesService,
+    private authService: AuthService,
+    private router: Router
+
+  ) { }
 
   ngOnInit() {
 
@@ -49,25 +49,28 @@ export class RegisterComponent implements OnInit {
 
     // Required Fields
     if (!this.validateService.validateStudentRegister(student)) {
-      this.flashMessage.show('Please fill in all fields', {cssClass: 'alert-danger', timeout: 3000});
+      this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
       return;
     }
 
     // Validate Email
-    if(!this.validateService.validateEmail(student.email)) {
-      this.flashMessage.show('please fill valid email', {cssClass: 'alert-danger', timeout: 3000});
-        return;
+    if (!this.validateService.validateEmail(student.email)) {
+      this.flashMessage.show('please fill valid email', { cssClass: 'alert-danger', timeout: 3000 });
+      return;
     }
 
     // Register user
-    this.authService.registerStudent(student).subscribe(data => {
-      if(data) {
-        this.flashMessage.show('You are now registered and can now login', {cssClass: 'alert-success', timeout: 3000});
-        this.router.navigate(['studentlogin']);
-      } else {
-        this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
-        this.router.navigate(['studentregister']);
-      }
-    });
-    }
+    this.authService.registerStudent(student).subscribe(() => {
+
+      this.flashMessage.show('You are now registered and can now login', { cssClass: 'alert-success', timeout: 3000 });
+      this.router.navigate(['studentlogin']);
+
+    }, err => {  
+      // console.log(err)
+      this.flashMessage.show('Index Number Was Taken', { cssClass: 'alert-danger', timeout: 3000 });
+      this.router.navigate(['studentregister']);
+    })
+
+  }
+
 }

@@ -59,14 +59,24 @@ export class TeacherregisterComponent implements OnInit {
     }
 
     // Register user
-    this.authService.registerTeacher(teacher).subscribe(data => {
-      if(data) {
-        this.flashMessage.show('Teacher Account Created Successfully!', {cssClass: 'alert-success', timeout: 3000});
-        this.router.navigate(['admindashboard']);
-      } else {
-        this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
-        this.router.navigate(['teacherregister']);
-      }
-    });
+    // this.authService.registerTeacher(teacher).subscribe(data => {
+    //   if(data) {
+    //     this.flashMessage.show('Teacher Account Created Successfully!', {cssClass: 'alert-success', timeout: 3000});
+    //     this.router.navigate(['admindashboard']);
+    //   } else {
+    //     this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
+    //     this.router.navigate(['teacherregister']);
+    //   }
+    // });
+    this.authService.registerTeacher(teacher).subscribe(() => {
+
+      this.flashMessage.show('Teacher Registered Successfully!', { cssClass: 'alert-success', timeout: 3000 });
+      this.router.navigate(['admindashboard']);
+
+    }, err => {  
+      // console.log(err)
+      this.flashMessage.show('Username Was Taken', { cssClass: 'alert-danger', timeout: 3000 });
+      this.router.navigate(['teacherregister']);
+    })
     }
 }

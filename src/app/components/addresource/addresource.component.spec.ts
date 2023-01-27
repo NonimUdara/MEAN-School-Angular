@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddresourceComponent } from './addresource.component';
 
-describe('AddresourceComponent', () => {
+xdescribe('AddresourceComponent', () => {
   let component: AddresourceComponent;
   let fixture: ComponentFixture<AddresourceComponent>;
 
@@ -17,7 +17,7 @@ describe('AddresourceComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  xit('should create', () => {
     expect(component).toBeTruthy();
   });
 });

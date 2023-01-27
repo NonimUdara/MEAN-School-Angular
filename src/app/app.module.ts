@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -54,14 +53,6 @@ import { ResourceslistComponent } from './components/resourceslist/resourceslist
 import { ResourcecrudComponent } from './components/resourcecrud/resourcecrud.component';
 import { ResourceupdateComponent } from './components/resourceupdate/resourceupdate.component';
 
-const appRoutes : Routes = [
-  // {path:'', component: HomeComponent},
-  // {path:'register', component: RegisterComponent},
-  // {path:'login', component: LoginComponent},
-  // {path:'dashboard', component: DashboardComponent},
-  // {path:'profile', component: ProfileComponent},  
-]
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -114,10 +105,10 @@ const appRoutes : Routes = [
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes),
     FlashMessagesModule.forRoot(),
     FlashMessagesModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+
   ],
   providers: [ValidateService, AuthService, HttpClient, HttpClientModule],
   bootstrap: [AppComponent]

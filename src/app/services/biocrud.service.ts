@@ -27,7 +27,7 @@ export class BiocrudService {
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/bio/add', bio,{headers: headers})
+    return this.http.post(`${this.REST_API}/add`, bio,{headers: headers})
     .pipe(map(response => response ));
   }
 

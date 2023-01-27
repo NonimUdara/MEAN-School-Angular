@@ -27,7 +27,7 @@ export class ArtscrudService {
   }){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/arts/add', arts,{headers: headers})
+    return this.http.post(`${this.REST_API}/add`, arts,{headers: headers})
     .pipe(map(response => response ));
   }
 

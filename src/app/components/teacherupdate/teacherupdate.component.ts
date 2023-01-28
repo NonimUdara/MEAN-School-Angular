@@ -26,7 +26,7 @@ export class TeacherupdateComponent implements OnInit {
         this.updateForm.setValue({
           name: res['name'],
           gender: res['gender'],
-          age: res['age'],
+          phone: res['phone'],
           worked: res['worked'],
           subject: res['subject'],
           nic: res['nic'],
@@ -38,7 +38,7 @@ export class TeacherupdateComponent implements OnInit {
       this.updateForm = this.formBuilder.group({
         name: [''],
         gender: [''],
-        age: [''],
+        phone: [''],
         worked: [''],
         subject: [''],
         nic: [''],

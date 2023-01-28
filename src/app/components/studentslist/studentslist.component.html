@@ -23,9 +23,11 @@
                 <td>{{student.email}}</td>
                 <td>{{student.nic}}</td>
                 <td class="text-center">
-                    <button class="btn btn-sm btn-primary" routerLink="/studentupdate/{{student._id}}" style="margin-right: 10px;">Edit</button>
+                    <button class="btn btn-sm btn-primary" routerLink="/studentupdate/{{student._id}}" style="padding-left: 16px; padding-right: 16px;">Edit</button>
+                </td>
+                <td class="text-center">
                     <button class="btn btn-sm btn-danger" (click)="delete(student._id,1)">Delete</button>
-                </td>                
+                </td>                  
             </tr>
         </tbody>
     </div>   

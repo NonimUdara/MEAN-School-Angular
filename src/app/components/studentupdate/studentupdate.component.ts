@@ -26,7 +26,7 @@ export class StudentupdateComponent implements OnInit {
           name: res['name'],
           index: res['index'],
           stream: res['stream'],
-          year: res['year'],
+          phone: res['phone'],
           email: res['email'],
           nic: res['nic'],
           
@@ -36,7 +36,7 @@ export class StudentupdateComponent implements OnInit {
         name: [''],
         index: [''],
         stream: [''],
-        year: [''],
+        phone: [''],
         email: [''],
         nic: [''],
 

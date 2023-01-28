@@ -1,5 +1,5 @@
 <h2 class="h2" style="text-align: center; margin-bottom: 50px; margin-top: -30px;">All Maths Meeting List with Update & Delete!</h2>
-<div class="container" style="margin-top: -50px;">
+<div class="container" style="margin-top: -40px;">
     <div class="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
     </div>
     <div class="table table-bordered">
@@ -10,7 +10,7 @@
                 <th scope="col">Title</th>
                 <th scope="col">Duration</th>
                 <th scope="col">Zoom Link</th>
-                <th scope="col">Meeting Id</th>
+                <th scope="col">Meeting ID</th>
                 <th scope="col">Meeting Passcode</th>
             </tr>
         </thead>
@@ -24,7 +24,9 @@
                 <td>{{meeting.id}}</td>
                 <td>{{meeting.passcode}}</td>
                 <td class="text-center">
-                    <button class="btn btn-sm btn-primary" routerLink="/mathsupdate/{{meeting._id}}" style="margin-right: 10px;">Edit</button>
+                    <button class="btn btn-sm btn-primary" routerLink="/mathsupdate/{{meeting._id}}" style="padding-left: 16px; padding-right: 16px;">Edit</button>
+                </td>
+                <td class="text-center">
                     <button class="btn btn-sm btn-danger" (click)="delete(meeting._id,1)">Delete</button>
                 </td>                
             </tr>

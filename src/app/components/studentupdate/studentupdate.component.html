@@ -1,16 +1,3 @@
-<!-- <div class="roe justify-content-center mt-3">
-    <div class="col-md-5">
-        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
-            <div class="form-group">
-                <label>Name</label>
-                <input class="form-control" type="text" formControlName="name" required>
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit">Update</button>
-            </div>
-        </form>
-    </div>
-</div> -->
 <h2 class="h2" style="text-align: center; margin-bottom: 50px;">Update Student From Here!</h2>
 <form class="card" style="padding: 30px;" [formGroup]="updateForm" (ngSubmit)="onUpdate()">
     <div class="form-group">
@@ -23,7 +10,6 @@
     </div>
     <div class="form-group">
         <label for="TextInput">Following Stream</label>
-        <!-- <input class="form-control" type="text" formControlName="stream" required> -->
         <select class="form-select" aria-label="Default select example" formControlName="stream" >
             <option value="Maths">Maths</option>
             <option value="Bio">Bio</option>
@@ -33,8 +19,8 @@
         </select>
     </div>
     <div class="form-group">
-        <label for="TextInput">Year Of Exam</label>
-        <input class="form-control" type="text" formControlName="year" required>
+        <label for="TextInput">Phone</label>
+        <input class="form-control" type="text" formControlName="phone" required>
     </div>
     <div class="form-group">
         <label for="TextInput">Email</label>

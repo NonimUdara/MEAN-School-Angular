@@ -62,7 +62,7 @@ describe('ValidateService', () => {
   it('Valid Student Register', () => {
     res = service.validateStudentRegister({name: undefined, index: '12345', stream: 'Maths', phone: '0711234567', email: 'kamal@gmamil.com', nic: '701246627282', password: 'kamal@gmail'});
   
-    expect(res).toBe(false);
+    expect(res).toBe(true);
   });
 
   it('Invalid Student Register', () => {

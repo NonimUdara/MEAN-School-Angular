@@ -37,7 +37,7 @@ export class AuthService {
     return this.http.post(`${this.REST_API}/authenticate`, student,{headers: headers})
     .pipe(map(response => response ));
   }
-
+//comment
   getProfile(){
     this.loadToken();
     const headers = new HttpHeaders({

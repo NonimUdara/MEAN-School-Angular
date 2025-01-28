@@ -13,6 +13,7 @@ export class TeacherloginComponent implements OnInit {
 
   faUserTie =faUserTie;
 
+  //username and password
   username!: String;
   password!: String;
 
